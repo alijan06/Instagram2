@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnsplashFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/unsplash_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/unsplash_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            tools:listitem="@layout/item"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>
